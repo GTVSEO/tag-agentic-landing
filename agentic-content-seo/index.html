@@ -985,8 +985,11 @@
     body.bp-editing :is(h1,h2,h3,h4,p,li,dt,dd,figcaption,q,cite,summary,small,.tds-chip,.tds-eyebrow,.tds-kicker,label,button.bp-tab):hover{outline:1px dashed #38BDF8;outline-offset:2px}
 </style>
 <style>
-    :root{--tds-grad-cta:linear-gradient(92deg,#7C3AED 0%,#3B82F6 100%);--tds-sh-cta:0 12px 26px rgba(124,58,237,.26);--tds-grad:linear-gradient(96deg,#9900EF 0%,#5B2CE8 48%,#0693E3 100%);--tds-grad-b:linear-gradient(92deg,#B23BF0 0%,#7C5CF7 40%,#3B82F6 100%);--ag-mono:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace}
-    .tds .tds-btn-primary{background:var(--tds-grad-cta)}
+    :root{--tds-grad-cta:linear-gradient(92deg,#FF5A1F 0%,#FF9E1B 100%);--tds-sh-cta:0 12px 26px rgba(255,90,31,.3);--tds-grad:linear-gradient(96deg,#9900EF 0%,#5B2CE8 48%,#0693E3 100%);--tds-grad-b:linear-gradient(92deg,#B23BF0 0%,#7C5CF7 40%,#3B82F6 100%);--ag-mono:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace}
+    .tds .tds-btn-primary{background:var(--tds-grad-cta);color:#fff}
+    .tds .tds-btn-primary:hover{box-shadow:0 16px 30px rgba(255,90,31,.36)}
+    @keyframes bpPulse{0%{box-shadow:0 0 0 0 rgba(255,90,31,.5)}70%{box-shadow:0 0 0 12px rgba(255,90,31,0)}100%{box-shadow:0 0 0 0 rgba(255,90,31,0)}}
+    #bp-bar .ag-bar-price{color:#E8480F}
     /* Hero tối: nhấn công nghệ */
     .ag-hero{background:var(--tds-ink);color:var(--tds-on-dark-2)}
     .ag-hero::before{background:radial-gradient(closest-side,rgba(11,197,252,.22),transparent 70%)}
