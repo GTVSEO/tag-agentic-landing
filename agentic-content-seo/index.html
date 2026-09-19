@@ -990,18 +990,10 @@
     .tds .tds-btn-primary:hover{box-shadow:0 16px 30px rgba(255,90,31,.36)}
     @keyframes bpPulse{0%{box-shadow:0 0 0 0 rgba(255,90,31,.5)}70%{box-shadow:0 0 0 12px rgba(255,90,31,0)}100%{box-shadow:0 0 0 0 rgba(255,90,31,0)}}
     #bp-bar .ag-bar-price{color:#E8480F}
-    /* Hero sáng pha cam (Trang Trần 19/09): tím TAG + cam hành động, thẻ terminal tối làm điểm nhấn công nghệ */
-    .ag-hero{background:linear-gradient(115deg,#F3F0FF 0%,#EEF1FE 46%,#FFF1E6 100%)}
-    .ag-hero::before{background:radial-gradient(closest-side,rgba(255,122,31,.26),transparent 70%)}
-    .ag-hero::after{background:radial-gradient(closest-side,rgba(124,58,237,.18),transparent 70%)}
-    .ag-hero .tds-eyebrow{color:#E8480F}
-    .ag-hero .tds-eyebrow::before{background:#E8480F}
+    /* Hero sáng tông tím-xanh như Blueprint (Vincent 19/09: cam chỉ ở nút hành động); thẻ terminal tối làm điểm nhấn công nghệ */
     .ag-hero .bp-usp-tip:hover,.ag-hero .bp-usp-tip:focus-visible{background:var(--tds-pu)}
     .ag-hero .bp-hero-img{box-shadow:0 30px 70px rgba(13,20,40,.3)}
-    .ag-hero .bp-hero-chip{background:var(--tds-grad-cta);color:#fff;box-shadow:0 12px 28px rgba(255,90,31,.3)}
-    .ag-hero .bp-hero-chip b{color:#fff}
     .ag-hero .bp-hero-facts .ag-alias{display:block;height:auto;padding:0;background:none;border:0;font-size:13px;font-weight:500;color:var(--tds-mut);white-space:normal;line-height:1.5}
-    .ag-hero .tds-accent-grad{background-image:linear-gradient(92deg,#5B2CE8 0%,#B23BF0 48%,#FF5A1F 100%)}
     /* Thẻ terminal thật */
     .ag-term{position:absolute;left:-36px;bottom:-30px;width:min(84%,380px);border-radius:16px;background:#0B1020;border:1px solid rgba(255,255,255,.12);box-shadow:0 24px 60px rgba(13,20,40,.35);overflow:hidden;font-family:var(--ag-mono);font-size:12.5px;line-height:1.55;color:#DCE3F5}
     .ag-term-bar{display:flex;align-items:center;gap:8px;padding:9px 12px;background:rgba(255,255,255,.05);border-bottom:1px solid rgba(255,255,255,.08);font-family:var(--tds-f-body);font-size:11.5px;color:var(--tds-on-dark-label);letter-spacing:.04em}
@@ -1048,7 +1040,7 @@
     .ag-run-side div{border-radius:12px;padding:12px 14px;background:var(--tds-lav);border:1px solid var(--tds-bd)}
     .ag-run-side small{display:block;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;margin-bottom:4px}
     .ag-run-side p{font-size:13.5px;color:var(--tds-body);line-height:1.55}
-    .ag-run-side .g{border-style:dashed;border-color:rgba(255,90,31,.55);background:#FFF6EE}.ag-run-side .g small{color:#E8480F}
+    .ag-run-side .g{border-style:dashed;border-color:var(--tds-pu);background:#F7F5FF}.ag-run-side .g small{color:var(--tds-pu3)}
     .ag-run-side .o{border-color:rgba(15,157,107,.4);background:#F0FBF6}.ag-run-side .o small{color:#0F9D6B}
     .ag-run-side .s small{color:var(--tds-pu3)}
     .ag-run-side .s p{font-family:var(--ag-mono);font-size:12.5px;color:var(--tds-ink)}
@@ -1177,7 +1169,7 @@
 <article>
 <!-- HERO -->
 <section id="hero" class="tds-section tds-section-hero bp-hero ag-hero">
-  <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><linearGradient id="agStar" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5B2CE8"/><stop offset="1" stop-color="#FF5A1F"/></linearGradient></defs></svg>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><linearGradient id="agStar" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7C3AED"/><stop offset="1" stop-color="#0693E3"/></linearGradient></defs></svg>
   <div class="tds-wrap tds-split tds-split-7-5 bp-hero-grid">
     <div class="bp-hero-copy">
       <nav aria-label="Breadcrumb"><ol class="bp-crumb"><li><a href="https://theaigrowth.io/">The AI Growth</a></li><li>Agentic Content SEO</li></ol></nav>
