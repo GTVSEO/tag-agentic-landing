@@ -1342,6 +1342,7 @@
     .ag-mod[open] .pm{transform:rotate(45deg)}
     .ag-tag{flex:none;font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:999px;background:#FFF3E8;color:#C2410C}
     .ag-tag.case{background:#EAF3FF;color:#0B5CAD}
+    .ag-tag.auto{background:#E9FBF3;color:#047857}
     .ag-mod-b{display:grid;grid-template-columns:minmax(0,1fr) 240px;gap:16px;padding:2px 14px 16px 56px}
     .ag-mod-b.nofig{grid-template-columns:minmax(0,1fr)}
     .ag-mod-b p{font-size:14.5px;color:var(--tds-body);margin:0}
@@ -1584,7 +1585,7 @@
           <div class="pz-row"><dt>Xác nhận lúc</dt><dd><time id="pz-time"></time></dd></div>
         </dl>
         <p class="pz-note soft" id="pz-team" hidden>Gói đội 3 người: bạn nhắn Zalo họ tên và email 2 người còn lại để đội ngũ mở tài khoản cho cả đội cùng lúc.</p>
-        <p class="pz-note soft" id="pz-adv" hidden>Bạn đã chọn tìm hiểu gói SEO &amp; GEO Consulting. Đội ngũ sẽ tư vấn riêng với bạn về gói này.</p>
+        <p class="pz-note soft" id="pz-adv" hidden>Bạn đã chọn tìm hiểu gói SEO &amp; GEO Consulting. Đội ngũ sẽ tư vấn riêng với bạn về phần này.</p>
 
         <div class="pz-acts" id="pz-acts-pending" hidden>
           <button type="button" class="tds-btn tds-btn-primary" id="pz-recheck">Kiểm tra lại</button>
@@ -1606,18 +1607,14 @@
       <section class="pz-card" aria-labelledby="pz-h2a">
         <h2 id="pz-h2a">Từ giờ đến khi vào học</h2>
         <ol class="pz-tl">
-          <li><h3>Nhận tài khoản học trong 24 giờ làm việc</h3><p>Email gồm thông tin đăng nhập, link repo học viên, bộ skill và link group học viên. Gói đội: mỗi người một tài khoản riêng.</p></li>
-          <li><h3>Cài đặt và gõ lệnh “bắt đầu”</h3><p>Xem bài cài đặt Claude Code hoặc Codex, tải repo về máy rồi gõ “bắt đầu” cho website bạn đang triển khai.</p></li>
-          <li><h3>Học theo nhịp của bạn</h3><p>Đi lần lượt 5 phần, kẹt ở đâu thì hỏi trong group học viên và livestream định kỳ.</p></li>
+          <li><h3>Nhận tài khoản học trong 24 giờ làm việc</h3><p>Email gồm thông tin đăng nhập, link repo học viên, bộ skill và link group học viên. Gói đội: mỗi người một tài khoản riêng.</p></li><li><h3>Cài đặt và gõ lệnh “bắt đầu”</h3><p>Xem bài cài đặt Claude Code hoặc Codex, tải repo về máy rồi gõ “bắt đầu” cho website bạn đang triển khai.</p></li><li><h3>Học theo nhịp của bạn</h3><p>Đi lần lượt 5 phần, kẹt ở đâu thì hỏi trong group học viên và livestream định kỳ.</p></li>
         </ol>
       </section>
       <div class="pz-col">
         <section class="pz-card" aria-labelledby="pz-h2b">
           <h2 id="pz-h2b">Công cụ cần chuẩn bị</h2>
           <ul class="pz-list">
-            <li><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span>Tài khoản Claude bản Pro (khoảng 20 USD mỗi tháng) hoặc Codex, dùng tài khoản của chính bạn.</span></li>
-            <li><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span>Quyền xem Google Search Console và GA4 của website bạn đang triển khai.</span></li>
-            <li><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span>Semrush hoặc Ahrefs nếu có. Chưa có thì khoá hướng dẫn cách nghiên cứu từ khoá, đối thủ qua DataForSEO API.</span></li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span>Tài khoản Claude bản Pro (khoảng 20 USD mỗi tháng) hoặc Codex, dùng tài khoản của chính bạn.</span></li><li><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span>Quyền xem Google Search Console và GA4 của website bạn đang triển khai.</span></li><li><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span>Semrush hoặc Ahrefs nếu có. Chưa có thì khoá hướng dẫn cách nghiên cứu từ khoá, đối thủ qua DataForSEO API.</span></li>
           </ul>
         </section>
         <section class="pz-card" aria-labelledby="pz-h2c">
@@ -1651,7 +1648,7 @@
 <script>
 (function () {
 
-  var CFG = {"endpoint": "https://script.google.com/macros/s/AKfycbwzBsdpeIcpM0KRL1xps4HHp59SBD3tHnpqv18YjAzMZxV1wdEJdaA0kN3YotakXQtO/exec", "price": 16797000, "priceTeam": 40312800, "prefix": "ASG", "bank": {"bin": "ACB", "name": "ACB · CN Phan Đăng Lưu", "account": "44444836", "holder": "CÔNG TY TNHH TMDV GTV SEO", "holder_ascii": "CONG TY TNHH TMDV GTV SEO"}, "landing": "../", "checkout": "../thanh-toan/", "thanks": "../cam-on/", "paid": "../cam-on-thanh-toan/", "codeRe": /^ASG[0-9A-Z]{6}$/};
+  var CFG = {"endpoint": "https://script.google.com/macros/s/AKfycbwzBsdpeIcpM0KRL1xps4HHp59SBD3tHnpqv18YjAzMZxV1wdEJdaA0kN3YotakXQtO/exec", "slug": "agentic-seo-geo", "name": "Agentic SEO & GEO", "price": 16797000, "priceTeam": 40312800, "prefix": "ASG", "bank": {"bin": "ACB", "name": "ACB · CN Phan Đăng Lưu", "account": "44444836", "holder": "CÔNG TY TNHH TMDV GTV SEO", "holder_ascii": "CONG TY TNHH TMDV GTV SEO"}, "landing": "../", "checkout": "../thanh-toan/", "thanks": "../cam-on/", "paid": "../cam-on-thanh-toan/", "codeRe": /^ASG[0-9A-Z]{6}$/};
   var Q = new URLSearchParams(location.search);
   var DEMO = Q.get('demo');
   var $ = function (id) { return document.getElementById(id); };
@@ -1696,7 +1693,7 @@
     var p = String(o.phone || '').replace(/\D/g, '');
     return { email: String(o.email).trim().toLowerCase(), phone_number: p ? '+84' + p.replace(/^0/, '') : undefined };
   }
-  function item(v) { return [{ item_id: 'agentic-seo-geo', item_name: 'Agentic SEO & GEO', price: v, quantity: 1 }]; }
+  function item(v) { return [{ item_id: CFG.slug, item_name: CFG.name, price: v, quantity: 1 }]; }
   function fill(sel, val) { each(sel, function (el) { el.textContent = val; }); }
   function copyBtns() {
     each('.pz-copy', function (b) {
@@ -1738,8 +1735,8 @@
     $('pz-steps').hidden = !paid; $('pz-chip').hidden = !paid; $('pz-rcpt').hidden = !paid; $('pz-sec').hidden = !paid;
     $('pz-lead-paid').hidden = !paid; $('pz-lead-wait').hidden = s !== 'wait'; $('pz-lead-pending').hidden = s !== 'pending';
     $('pz-acts-paid').hidden = !paid; $('pz-acts-pending').hidden = s !== 'pending';
-    $('pz-h1').textContent = paid ? 'Chào mừng' + (o && o.name ? ' ' + firstName(o.name) : '') + ' đến với khoá Agentic SEO & GEO'
-      : s === 'wait' ? 'Cảm ơn bạn, hệ thống đang kiểm tra thanh toán' : 'Cảm ơn bạn đã đăng ký khoá Agentic SEO & GEO';
+    $('pz-h1').textContent = paid ? 'Chào mừng' + (o && o.name ? ' ' + firstName(o.name) : '') + ' đến với khoá ' + CFG.name
+      : s === 'wait' ? 'Cảm ơn bạn, hệ thống đang kiểm tra thanh toán' : 'Cảm ơn bạn đã đăng ký khoá ' + CFG.name;
   }
   if (o) {
     fill('[data-ma]', o.ma); $('pz-pending-code').hidden = false;
@@ -1753,7 +1750,7 @@
     var now = new Date();
     $('pz-time').setAttribute('datetime', now.toISOString());
     $('pz-time').textContent = now.toLocaleString('vi-VN', { hour: '2-digit', minute: '2-digit', day: '2-digit', month: '2-digit', year: 'numeric' });
-    $('pz-adv').hidden = !o.consulting; $('pz-team').hidden = !o.doi;
+    $('pz-adv').hidden = !(o.consulting || o.coaching); $('pz-team').hidden = !o.doi;
     state('paid'); copyBtns();
     track(o.ma, 'purchase', { transaction_id: o.ma, value: tien || CFG.price, currency: 'VND', items: item(tien || CFG.price), user_data: userData(o) });
   }

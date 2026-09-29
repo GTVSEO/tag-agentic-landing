@@ -1342,6 +1342,7 @@
     .ag-mod[open] .pm{transform:rotate(45deg)}
     .ag-tag{flex:none;font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:999px;background:#FFF3E8;color:#C2410C}
     .ag-tag.case{background:#EAF3FF;color:#0B5CAD}
+    .ag-tag.auto{background:#E9FBF3;color:#047857}
     .ag-mod-b{display:grid;grid-template-columns:minmax(0,1fr) 240px;gap:16px;padding:2px 14px 16px 56px}
     .ag-mod-b.nofig{grid-template-columns:minmax(0,1fr)}
     .ag-mod-b p{font-size:14.5px;color:var(--tds-body);margin:0}
@@ -1580,9 +1581,7 @@
       <section class="pz-card" aria-labelledby="pz-h2a">
         <h2 id="pz-h2a">Việc tiếp theo</h2>
         <ol class="pz-tl">
-          <li><h3>Nhận cuộc gọi tư vấn</h3><p>Bạn chuẩn bị sẵn tên miền website đang triển khai, mục tiêu 6 tháng tới và số người trong đội sẽ học, cuộc gọi sẽ nhanh và đúng trọng tâm hơn.</p></li>
-          <li><h3>Thanh toán học phí</h3><p>Sau cuộc gọi, đội ngũ gửi bạn link thanh toán online bằng mã QR. Gói đội 3 người giảm 20% mỗi người.</p></li>
-          <li><h3>Nhận tài khoản học trong 24 giờ làm việc</h3><p>Bạn nhận thông tin đăng nhập, link repo học viên, bộ skill và link group học viên qua email.</p></li>
+          <li><h3>Nhận cuộc gọi tư vấn</h3><p>Bạn chuẩn bị sẵn tên miền website đang triển khai, mục tiêu 6 tháng tới và số người trong đội sẽ học, cuộc gọi sẽ nhanh và đúng trọng tâm hơn.</p></li><li><h3>Thanh toán học phí</h3><p>Sau cuộc gọi, đội ngũ gửi bạn link thanh toán online bằng mã QR. Gói đội 3 người giảm 20% mỗi người.</p></li><li><h3>Nhận tài khoản học trong 24 giờ làm việc</h3><p>Bạn nhận thông tin đăng nhập, link repo học viên, bộ skill và link group học viên qua email.</p></li>
         </ol>
       </section>
       <section class="pz-card pz-up" aria-labelledby="pz-h2b">
@@ -1616,7 +1615,7 @@
 <script>
 (function () {
 
-  var CFG = {"endpoint": "https://script.google.com/macros/s/AKfycbwzBsdpeIcpM0KRL1xps4HHp59SBD3tHnpqv18YjAzMZxV1wdEJdaA0kN3YotakXQtO/exec", "price": 16797000, "priceTeam": 40312800, "prefix": "ASG", "bank": {"bin": "ACB", "name": "ACB · CN Phan Đăng Lưu", "account": "44444836", "holder": "CÔNG TY TNHH TMDV GTV SEO", "holder_ascii": "CONG TY TNHH TMDV GTV SEO"}, "landing": "../", "checkout": "../thanh-toan/", "thanks": "../cam-on/", "paid": "../cam-on-thanh-toan/", "codeRe": /^ASG[0-9A-Z]{6}$/};
+  var CFG = {"endpoint": "https://script.google.com/macros/s/AKfycbwzBsdpeIcpM0KRL1xps4HHp59SBD3tHnpqv18YjAzMZxV1wdEJdaA0kN3YotakXQtO/exec", "slug": "agentic-seo-geo", "name": "Agentic SEO & GEO", "price": 16797000, "priceTeam": 40312800, "prefix": "ASG", "bank": {"bin": "ACB", "name": "ACB · CN Phan Đăng Lưu", "account": "44444836", "holder": "CÔNG TY TNHH TMDV GTV SEO", "holder_ascii": "CONG TY TNHH TMDV GTV SEO"}, "landing": "../", "checkout": "../thanh-toan/", "thanks": "../cam-on/", "paid": "../cam-on-thanh-toan/", "codeRe": /^ASG[0-9A-Z]{6}$/};
   var Q = new URLSearchParams(location.search);
   var DEMO = Q.get('demo');
   var $ = function (id) { return document.getElementById(id); };
@@ -1661,7 +1660,7 @@
     var p = String(o.phone || '').replace(/\D/g, '');
     return { email: String(o.email).trim().toLowerCase(), phone_number: p ? '+84' + p.replace(/^0/, '') : undefined };
   }
-  function item(v) { return [{ item_id: 'agentic-seo-geo', item_name: 'Agentic SEO & GEO', price: v, quantity: 1 }]; }
+  function item(v) { return [{ item_id: CFG.slug, item_name: CFG.name, price: v, quantity: 1 }]; }
   function fill(sel, val) { each(sel, function (el) { el.textContent = val; }); }
   function copyBtns() {
     each('.pz-copy', function (b) {
@@ -1702,10 +1701,10 @@
     fill('[data-ma]', o.ma); $('pz-code').hidden = false;
     each('[data-pay-link]', function (a) {
       a.href = CFG.checkout + '?ma=' + o.ma + (DEMO ? '&demo=1' : '');
-      a.addEventListener('click', function () { push('upgrade_to_pay', { form: 'agentic-seo-geo' }); });
+      a.addEventListener('click', function () { push('upgrade_to_pay', { form: CFG.slug }); });
     });
-    $('pz-adv').hidden = !o.consulting; $('pz-team').hidden = !o.doi;
-    if (!o.fromLink) track(o.ma, 'generate_lead', { form: 'agentic-seo-geo', action: 'lead', consulting: !!o.consulting, team: !!o.doi, value: o.amount || CFG.price, currency: 'VND', user_data: userData(o) });
+    $('pz-adv').hidden = !(o.consulting || o.coaching); $('pz-team').hidden = !o.doi;
+    if (!o.fromLink) track(o.ma, 'generate_lead', { form: CFG.slug, action: 'lead', consulting: !!(o.consulting || o.coaching), team: !!o.doi, value: o.amount || CFG.price, currency: 'VND', user_data: userData(o) });
   } else {
     /* mở thẳng trang, không có mã: nút thanh toán đưa về form để lấy mã */
     each('[data-pay-link]', function (a) { a.href = CFG.landing + '#dang-ky'; });
