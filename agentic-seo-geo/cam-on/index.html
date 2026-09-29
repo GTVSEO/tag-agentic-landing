@@ -1351,7 +1351,7 @@
     .ag-full-note{font-size:13.5px;color:var(--tds-mut);margin-top:6px}
     @media (max-width:760px){.ag-mod-b,.ag-full-m{grid-template-columns:1fr}.ag-mod-b{padding-left:14px}.ag-fig{max-width:360px}}
     /* v7: hero, cụm highlight không gãy giữa dòng */
-    .ag-hero h1 .tds-accent-grad,.ag-hero h1 .tds-accent{white-space:nowrap}
+    @media (min-width:761px){.ag-hero h1 .tds-accent-grad,.ag-hero h1 .tds-accent{white-space:nowrap}}
     .ag-hero h1{text-wrap:balance}
     /* v7: kết quả học viên và dự án, thẻ chi phí */
     .ag-res{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:0 0 40px}
